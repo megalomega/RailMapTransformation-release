@@ -8,9 +8,9 @@ The HTML version serves only as a proof of concept to the genericness of the out
 
 [Snap.svg](https://github.com/adobe-webplatform/Snap.svg) is used to handle the path animation
 
-- [Adelaide html](adelaide/index.html)
+- [Adelaide html](http://htmlpreview.github.io/?https://github.com/megalomega/RailMapTransformation-release/blob/master/adelaide/index.html)
 
-- [Sydney html](sydney/index.html)
+- [Sydney html](http://htmlpreview.github.io/?https://github.com/megalomega/RailMapTransformation-release/blob/master/sydney/index.html)
 
 ## Animation Instructions
 
@@ -19,10 +19,10 @@ The HTML version serves only as a proof of concept to the genericness of the out
 1. Open the [sydney/sydney.svg](sydney/sydney.svg) (or [adelaide/adelaide.svg](adelaide/adelaide.svg)) file
 2. `Select ➜ All`  
 ![Before selecting all layer elements](guide/selectall.png)
-3. `Object ➜ Ungroup` twice <div><div style="max-width:49%;display:inline-block;">![Before first ungroup](guide/ungroup1.png)</div><div style="max-width:49%;display:inline-block;">![Before second ungroup](guide/ungroup2.png)</div></div>
+3. `Object ➜ Ungroup` twice<br><img src="guide/ungroup1.png" width="49%" alt="Before first ungroup"> <img src="guide/ungroup2.png" width="49%" alt="Before second ungroup">
 4. `Layer Panel Hamburger ➜ Release to Layers (Sequence)`  
 ![Before splitting paths to individual sublayers](guide/releaselayers.png)
-5. Rename all sublayer sequence names with their inner path's name. <div><div style="max-width:32%;display:inline-block;">![Copy the text of the child path](guide/layercopy.png)</div><div style="max-width:32%;display:inline-block;">![And paste the name to the path parent's](guide/layerpaste.png)</div><div style="max-width:32%;display:inline-block;">![Post paste](guide/layerpasted.png)</div></div>
+5. Rename all sublayer sequence names with their inner path's name.<br><img src="guide/layercopy.png" width="32%" alt="Copy the text of the child path"> <img src="guide/layerpaste.png" width="32%" alt="And paste the name to the path parent's"> <img src="guide/layerpasted.png" width="32%" alt="Post paste">
 
 6. Promote the sublayers to layers  
 ![Dragging the sublayers to root](guide/layersup.png)
@@ -32,7 +32,7 @@ The HTML version serves only as a proof of concept to the genericness of the out
 
 
 ### After Effects
-1. Import the `.ai` file as a composition <div><div style="max-width:33%;display:inline-block;">![](guide/import1.png)</div><div style="max-width:66%;display:inline-block;">![Take care to import as a Composition and nothing else](guide/import2.png)</div></div>
+1. Import the `.ai` file as a composition<br><img src="guide/import1.png" width="33%"> <img src="guide/import2.png" width="66%" alt="Take care to import as a Composition and nothing else">
 2. `Edit ➜ Select All` layers in the imported composition
 3. `Right Click ➜ Create ➜ Create Shapes from Vector Layer`  
 ![](guide/shapes.png)
