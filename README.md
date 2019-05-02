@@ -63,7 +63,7 @@ The HTML version serves only as a proof of concept to the genericness of the out
 
 ### AE Animation
 
-![](guide/2019-04-05 05-43-57_1.gif)
+![](guide/2019-04-05%2005-43-57_1.gif)
 
 ## General Strategy
 
