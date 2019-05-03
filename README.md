@@ -8,9 +8,9 @@ The HTML version serves only as a proof of concept to the genericness of the out
 
 [Snap.svg](https://github.com/adobe-webplatform/Snap.svg) is used to handle the path animation
 
-- [Adelaide html](http://htmlpreview.github.io/?https://github.com/megalomega/RailMapTransformation-release/blob/master/adelaide/index.html)
+- [Adelaide html](https://megalomega.github.io/RailMapTransformation-release/adelaide/index.html)
 
-- [Sydney html](http://htmlpreview.github.io/?https://github.com/megalomega/RailMapTransformation-release/blob/master/sydney/index.html)
+- [Sydney html](https://megalomega.github.io/RailMapTransformation-release/sydney/index.html)
 
 ## Animation Instructions
 
