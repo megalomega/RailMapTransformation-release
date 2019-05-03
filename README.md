@@ -69,19 +69,19 @@ The HTML version serves only as a proof of concept to the genericness of the out
 
 - Painstakingly trace PDF lines with illustrator (Metro lines): some of the PDFs could be opened directly in illustrator but the path data usually won't be *"complete"*, nor were they *"clean"*, in at least both of those cases tracing saves time rather than having to deal with bad data
 
- - *"complete"* case: the line data in incomplete usually when a train line forks, there wasn't two overlapped line in the PDF file, just one line representing the main branch, and a small line representing the secondary branch
+ - *"complete"* case: the line data is incomplete usually when a train line forks, there weren't two continuous overlapped lines present in the PDF file, just one long continuous line representing the main branch, and a small line representing the secondary branch
 
  - *"clean"* case: line data wasn't clean in the case of lines that had a white dash in between
 
-- Using the original PDF as reference, manually draw an ellipse at each station point on the Metro lines in illustrator (point mapping), this includes marking points the closest to each other for each line in the case of shared stations
+- Using the original PDF as reference, manually draw an ellipse at each station point on the Metro lines in illustrator (point mapping)
 
 - Process GTFS points data into lines (True Geo lines)
 
 - At this point, SVG should be the underlying technology used
 
-- Generate the mapping between the Metro lines and the True Geo lines by "sampling" the Metro lines based on the points mapping (the ellipses are converted to x/y coordinates and translated as a percentage as the metro map)
+- Generate the mapping between the Metro lines and the True Geo lines by "sampling" the Metro lines based on the points mapping (the ellipses are converted to x/y coordinates and translated as a percentage on their corresponding Metro lines)
 
-- e.g. If there's 3 GTFS entries between Station A and Station B, Station A is at 40% of the Metro line and Station B is at 50% of the Metro line. Then "sample" the Metro line as a point at 40% (for Station A), 42.5%, 45%, 47.5%, and finally at 50% for Station B (keeping it continuous throughout the entire dataset, there's no need to draw Station B in this iteration as there'll be at least a Station C - the "100%" terminus or another station - afterwards)
+- e.g. If there's 3 GTFS entries between Station D and Station E, Station D is at 40% of the Metro line and Station E is at 50% of the Metro line. Then "sample" the Metro line as a point at 40% (for Station D), 42.5%, 45%, 47.5%, and finally at 50% for Station E (keeping it continuous throughout the entire dataset, there's no need to draw Station E in this iteration as there'll be at least a Station Z - the "100%" terminus or another station - afterwards)
 
 ```js
 const svg = document.createElementNS('http://www.w3.org/2000/svg', "svg");
@@ -109,16 +109,6 @@ console.log(metroMapPoints);
 
 - With this approach, bus lines, ferries and all sorts of transit systems can be animated, but in the case of Hobart (the buslines each have a psuedo-metro map, but no cohesive network map), Darwin, Canberra, the maps are usually in True Geography form
 
-## Misc.
-
-It depends on the complexity and scale of the region visualized, but on average (excluding an extreme amount of time spent on Melbourne Trams / NSW Regional) it took about 3 days per visualization. About 8 hours for line tracing, 6 hours for line mapping (plotting station points on the traced path data), at most an hour for the illustrator / after effects import step, about a day to figure out the composition (e.g. scaling the ruler, aligning the background), and 10 hours for rendering.
-
-The project also took 2 weeks of data preparation / research.
-
-## Questions?
-
-If you have any questions related to the Sydney/Adelaide RMT animation release, open an issue. For city/state/country requests, see [/r/MapVsGeo](https://reddit.com/r/MapVsGeo)
-
 ## Licenses
 
 
@@ -130,7 +120,7 @@ If you have any questions related to the Sydney/Adelaide RMT animation release, 
 
  - When this text or any content as part of this repo is used, as reference or as a guide: you are only allowed to use it in a non-commercial context
     - Examples of what is not permitted, not limited to, is that you:
-      1. Must not rehost this content on a how-to blog with advertisement
+      1. Must not rehost this content on a how-to blog with advertisement(s)
       2. Must not capture/render/rehost the HTML/After Effect versions and post it on your advertisement-filled content aggregator page
   - and your derived work (with modifications or otherwise) must use the same CC BY-NC-SA 4.0 license with attribution.
 
